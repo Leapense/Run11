@@ -1,0 +1,44 @@
+﻿<mica:MicaWindow x:Class="Run11.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Run11"
+        xmlns:mica="clr-namespace:MicaWPF.Controls;assembly=MicaWPF"
+        xmlns:wpfui="http://schemas.lepo.co/wpfui/2022/xaml"
+        mc:Ignorable="d"
+        FontFamily="Segoe UI Variable Display"
+                 FontWeight="Medium"
+                 
+        Title="Run 11" Height="280" Width="516" TitleBarType="WinUI" ResizeMode="CanMinimize" Icon="/deqmb2f-c96c5c1d-07e8-47b6-a49f-6b99f1d28c46.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="98*"/>
+            <RowDefinition Height="117*"/>
+            <RowDefinition Height="49*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Label x:Name="L1" Content="Type the name of program, folder, document, or Internet resource, &#xD;&#xA;and Windows will open it for you." HorizontalAlignment="Left" Margin="102,0,0,0" VerticalAlignment="Center">
+            </Label>
+            <Image x:Name="I1" HorizontalAlignment="Left" Height="56" Margin="20,20,0,0" VerticalAlignment="Top" Width="60" Source="/deqmb2f-c96c5c1d-07e8-47b6-a49f-6b99f1d28c46.png"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Label x:Name="L2" Content="Open:" HorizontalAlignment="Left" Margin="45,0,0,0" VerticalAlignment="Center" ></Label>
+            <wpfui:SearchBox x:Name="procs" FontSize="11" Text="Program / folder / document / Internet resource name" FontFamily="Segoe UI Variable Display" FontWeight="Medium" HorizontalAlignment="Left" Margin="92,0,0,0" VerticalAlignment="Center" Width="396" Icon="ArrowRight24"></wpfui:SearchBox>
+        </Grid>
+        <Grid Grid.Row="2" Background="#33525252">
+            <wpfui:Button x:Name="B1" Content="Ok" FontFamily="Segoe UI Variable Display" FontSize="11" Padding="2" HorizontalAlignment="Left" Margin="280,0,0,0" Height="24" Width="72" Click="Button_Click" Appearance="Dark"/>
+            <wpfui:Button x:Name="B2" Content="Cancel" FontFamily="Segoe UI Variable Display" FontSize="11" Padding="2" Appearance="Dark" HorizontalAlignment="Left" Margin="352,0,0,0" Height="24" Width="72" IsCancel="True" Cursor="Hand" Click="Button_Click_1"/>
+            <wpfui:Button x:Name="B3" Content="Browse..." FontFamily="Segoe UI Variable Display" FontSize="11" Padding="2" Appearance="Dark" HorizontalAlignment="Left" Margin="424,0,0,0" Height="24" Width="72" Click="Button_Click_2"/>
+            <ComboBox x:Name="ThemeChanger" HorizontalAlignment="Left" Margin="10,0,0,0" Width="210" SelectionChanged="ThemeChanger_SelectionChanged">
+                <ComboBoxItem Content="Choose Theme Here!" IsSelected="True"/>
+                <ComboBoxItem x:Name="CB1" Content="Arcylic" Tag="0" />
+                <ComboBoxItem x:Name="CB2" Content="Mica" Tag="1" />
+                <ComboBoxItem x:Name="CB3" Content="Tabbed" Tag="2" />
+                <ComboBoxItem x:Name="CB4" Content="Solid" Tag="3" />
+            </ComboBox>
+
+        </Grid>
+
+    </Grid>
+</mica:MicaWindow>

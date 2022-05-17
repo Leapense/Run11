@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows10.0.19041.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Run 1.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="deqmb2f-c96c5c1d-07e8-47b6-a49f-6b99f1d28c46.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Run 1.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MicaWPF" Version="3.1.26" />
+    <PackageReference Include="WPF-UI" Version="1.2.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="deqmb2f-c96c5c1d-07e8-47b6-a49f-6b99f1d28c46.png" />
+  </ItemGroup>
+
+</Project>
